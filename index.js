@@ -5,6 +5,6 @@ module.exports = {
   name: 'emburger',
 
   isDevelopingAddon: function() {
-    return true;
+    return false;
   }
 };
