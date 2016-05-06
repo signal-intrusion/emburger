@@ -1,17 +1,39 @@
 # Emburger
 
-This README outlines the details of collaborating on this Ember addon.
-
 ## Installation
 
-* `git clone` this repository
-* `npm install`
-* `bower install`
+* `ember install https://github.com/Upstatement/emburger.git`
+
+## Usage
+
+`{{emburger-button}}`
+
+### Actions
+
+Pass in a closure action to fire on click:
+
+`{{emburger-button onConsume=(action "openMenu")}}`
+
+### Options
+
+* `specialOrders` - define a preset special order
+  ex. `{{emburger-button specialOrders="bigmac"}}`
+  ex. `{{emburger-button specialOrders="doubleQuarterPounder"}}`
+
+* `vegetarian`
+* `paleo`
+* `withCheese`
+* `toppings` - space delimited string of custom toppings
+
+#### 18ln
+
+* For projects that require the metric system:
+  `{{emburger-button specialOrders="royale" withCheese=true}}`
 
 ## Running
 
 * `ember server`
-* Visit your app at http://localhost:4200.
+* Visit your app at [http://localhost:4242](http://localhost:4242).
 
 ## Running Tests
 

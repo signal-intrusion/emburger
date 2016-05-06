@@ -38,7 +38,10 @@
     "loader.js": "^4.0.1"
   },
   "keywords": [
-    "ember-addon"
+    "ember-addon",
+    "hamburger menu",
+    "button",
+    "humor"
   ],
   "dependencies": {
     "ember-cli-htmlbars": "^1.0.3",
