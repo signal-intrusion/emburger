@@ -2,5 +2,9 @@
 'use strict';
 
 module.exports = {
-  name: 'emburger'
+  name: 'emburger',
+
+  isDevelopingAddon: function() {
+    return true;
+  }
 };
