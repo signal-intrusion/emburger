@@ -63,7 +63,7 @@
 
 .hamburger-is-open .hamburger__top {
   transform: rotate(160deg) translateX(-4px);
-  fill: tan;
+  fill: #F0D2AA;
 }
 
 .hamburger__bottom {
@@ -71,7 +71,15 @@
 }
 
 .hamburger-is-open .hamburger__bottom {
-  fill: tan;
+  fill: #F0D2AA;
+}
+
+
+
+/*----- hamburger patty -----*/
+
+.hamburger-cheese {
+  margin-bottom: -10%;
 }
 
 
@@ -87,8 +95,8 @@
   background-color: black;
   border-radius: 105px;
 
-  transform-origin: 50% 50%;
-  transition: all .4s ease;
+  /* transform-origin: 50% 50%; */
+  /* transition: all .4s ease; */
 }
 
 .hamburger__patty:first-of-type {
@@ -107,12 +115,12 @@
 }
 
 .hamburger-is-open .hamburger__patty {
-  transform: translateX(2px);
-  background-color: brown;
+  /* transform: translateX(2px); */
+  background-color: #FF6C43;
 }
 
 .hamburger-is-open .bread.hamburger__patty {
-  background-color: tan;
+  background-color: #F0D2AA;
 }
 
 .veggie.hamburger-is-open .hamburger__patty {

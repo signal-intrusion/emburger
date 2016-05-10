@@ -1,0 +1,1 @@
+export { default } from 'emburger/components/hamburger-lettuce';
