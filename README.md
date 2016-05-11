@@ -53,8 +53,8 @@ For more information on using ember-cli, visit [http://ember-cli.com/](http://em
 ## Collaborators
 
 Made at [Upstatement](https://github.com/Upstatement) with help from these lovely folks:
-[ebaker1736](https://github.com/orgs/Upstatement/people/ebaker1736)
-[kjmiller1029](https://github.com/orgs/Upstatement/people/kjmiller1029)
-[NathanHass](https://github.com/orgs/Upstatement/people/NathanHass)
+* [ebaker1736](https://github.com/orgs/Upstatement/people/ebaker1736)
+* [kjmiller1029](https://github.com/orgs/Upstatement/people/kjmiller1029)
+* [NathanHass](https://github.com/orgs/Upstatement/people/NathanHass)
 
 
