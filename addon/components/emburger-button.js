@@ -4,11 +4,17 @@ import layout from '../templates/components/emburger-button';
 export default Ember.Component.extend({
   layout,
   classNames: ['hamburger'],
-  classNameBindings: ['isOpen:hamburger-is-open', 'size', 'vegetarian:veggie'],
+  classNameBindings: [
+                      'isOpen:hamburger-is-open:hamburger-is-closed',
+                      'size',
+                      'vegetarian:veggie',
+                      'isInAndOut:in-and-out'
+                     ],
   patties: ['allBeef'],
   toppingsArray: [],
   specialOrders: false,
   vegetarian: false,
+  isInAndOut: false,
 
   toppings: '',
   paleo: false,
@@ -37,6 +43,7 @@ export default Ember.Component.extend({
 
   _useTheFryalator(yourOrder) {
     return {
+      inandout: this._makeInAndOut,
       bigmac: this._makeBigMac,
       whitecastle: this._makeWhiteCastle,
       doubleQuarterPounder: this._makeDoubleQuarterPounder,
@@ -46,10 +53,14 @@ export default Ember.Component.extend({
     }[yourOrder].call(this);
   },
 
+  _makeInAndOut() {
+    this.set('isInAndOut',  true);
+  },
+
   _makeBigMac() {
     this.set('size', 'bigmac');
     this.set('patties', [ 'allBeef', 'bread', 'allBeef' ]);
-    this.set('toppingsArray', [ 'mustard', 'ketchup', 'pickles' ]);
+    this.set('toppingsArray', [ 'mustard', 'ketchup', 'pickles', 'special-sauce' ]);
     this.set('withCheese',  true);
   },
 

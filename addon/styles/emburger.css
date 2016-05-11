@@ -1,14 +1,15 @@
 /*----- hamburger -----*/
 
 .hamburger {
-  width: 50px;
+  width: 52px;
   padding: 0;
   background: none;
   border: none;
 }
 
 .whitecastle.hamburger {
-  transform: scale(0.4);
+  width: 20px
+  /* transform: scale(0.4); */
 }
 
 .slider.hamburger {
@@ -18,11 +19,15 @@
 .quarterpounder.hamburger,
 .royale.hamburger,
 .krustyburger.hamburger {
-  width: 60px;
+  width: 62px;
+}
+
+.slider .hamburger__topping {
+  height: 10px;
 }
 
 .bigmac.hamburger {
-  width: 100px;
+  width: 102px;
 }
 
 .supersize.hamburger {
@@ -58,7 +63,7 @@
 
 .hamburger__top {
   transform-origin: 100% 100%;
-  transition: all .4s ease;
+  transition: all 300ms ease;
 }
 
 .hamburger-is-open .hamburger__top {
@@ -67,7 +72,7 @@
 }
 
 .hamburger__bottom {
-  transition: all .4s ease;
+  transition: all 300ms ease;
 }
 
 .hamburger-is-open .hamburger__bottom {
@@ -76,11 +81,17 @@
 
 
 
-/*----- hamburger patty -----*/
+/*----- hamburger cheese -----*/
 
 .hamburger-cheese {
-  margin-bottom: -10%;
+  margin-bottom: -20%;
 }
+
+.bigmac .hamburger-cheese,
+.supersize .hamburger-cheese {
+  margin-bottom: -12%;
+}
+
 
 
 
@@ -88,23 +99,28 @@
 
 .hamburger__patty {
   display: block;
-  width: 98%;
-  margin: 3px auto;
   padding-top: 17%;
 
+  transition: all 300ms ease;
   background-color: black;
   border-radius: 105px;
-
-  /* transform-origin: 50% 50%; */
-  /* transition: all .4s ease; */
 }
 
 .hamburger__patty:first-of-type {
-  margin-top: 2px;
+  margin-top: 1px;
 }
 
 .hamburger__patty:last-of-type {
-  margin-bottom: 2px;
+  margin-bottom: -1px;
+}
+
+
+.bigmac .hamburger__patty:last-of-type,
+.supersize .hamburger__patty:last-of-type,
+.quarterpounder .hamburger__patty:last-of-type,
+.royale .hamburger__patty:last-of-type,
+.krustyburger .hamburger__patty:last-of-type {
+  margin-bottom: 3px;
 }
 
 .slider .hamburger__patty:first-of-type,
@@ -131,66 +147,81 @@
 
 /*----- hamburger toppings -----*/
 
-.hamburger__topping {
-  display: none;
-  width: 98%;
-  margin: 5px auto;
-  padding-top: 9%;
-
-  background-color: black;
-  border-radius: 105px;
-
-  transform-origin: 50% 50%;
-  transition: all .4s ease;
-}
-
-.cheese .hamburger__topping,
-.mustard .hamburger__topping,
-.lettuce .hamburger__topping,
-.pickles .hamburger__topping,
-.mayo .hamburger__topping,
-.special-sauce .hamburger__topping,
-.ketchup .hamburger__topping {
-  display: block;
-}
-
-.hamburger-is-open .ketchup .hamburger__topping {
-  background-color: red;
-}
-
-.hamburger-is-open .mustard .hamburger__topping {
-  background-color: yellow;
-}
-
-.hamburger-is-open .lettuce .hamburger__topping {
-  background-color: yellowgreen;
-}
-
-.hamburger-is-open .pickles .hamburger__topping {
-  background-color: green;
-}
-
-.hamburger-is-open .mayo .hamburger__topping {
-  background-color: lightyellow;
-}
-
-.hamburger-is-open .special-sauce .hamburger__topping {
-  background-color: peachpuff;
-}
-
-.hamburger-is-open .cheese .hamburger__topping {
-  background-color: #FFFF33;
-}
-
 .hamburger__topping:first-of-type {
+  margin-top: -8px;
+}
+
+.hamburger__topping {
   margin-top: 2px;
+  height: 7px;
 }
 
-.hamburger-is-open .hamburger__topping {
-  transform: translateX(2px);
-  background-color: brown;
+.hamburger__topping.hamburger-lettuce {
+  margin-top: 6px;
 }
 
-.hamburger-is-open .hamburger__topping {
-  transform: translateX(2px);
+.hamburger-sauce {
+  height: 4px;
+  margin-bottom: 4px;
+  margin-top: 0px;
+}
+
+.slider .hamburger__topping {
+  height: 5px;
+}
+
+.whitecastle .hamburger__topping {
+  height: 3px;
+}
+
+.quarterpounder .hamburger__topping,
+.royale .hamburger__topping,
+.krustyburger .hamburger__topping {
+  height: 7px;
+}
+
+.quarterpounder .hamburger__topping:last-of-type,
+.royale .hamburger__topping:last-of-type,
+.krustyburger .hamburger__topping:last-of-type {
+  margin-bottom: 0px;
+}
+
+.quarterpounder .hamburger__topping:first-of-type,
+.royale .hamburger__topping:first-of-type,
+.krustyburger .hamburger__topping:first-of-type {
+  margin-top: -4px;
+}
+
+.quarterpounder .hamburger-sauce,
+.royale .hamburger-sauce,
+.krustyburger .hamburger-sauce {
+  margin-bottom: 0px;
+}
+
+.supersize .hamburger__topping,
+.bigmac .hamburger__topping {
+  height: initial;
+  margin: 0;
+}
+
+.supersize .hamburger__topping,
+.bigmac .hamburger__topping {
+  height: initial;
+}
+
+.cheese,
+.hamburger__topping svg path {
+  transition: fill 300ms ease;
+}
+
+.hamburger-is-closed .cheese,
+.hamburger-is-closed .hamburger__topping svg path {
+  fill: black;
+}
+
+.in-and-out.hamburger-is-open .hamburger__patty,
+.in-and-out.hamburger-is-open .hamburger__bottom-bun,
+.in-and-out.hamburger-is-open .hamburger__top-bun,
+.in-and-out.hamburger-is-open .hamburger__topping {
+  display:none;
 }

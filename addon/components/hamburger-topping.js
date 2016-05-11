@@ -3,6 +3,7 @@ import layout from '../templates/components/hamburger-topping';
 
 export default Ember.Component.extend({
   layout,
+  classNames: ['hamburger__topping'],
   classNameBindings: ['toppingComponent'],
   topping: '',
 
